@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental: Doença Celíaca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6aab9c 0%, #a7c0cd 100%);
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+        
+        .mind-map {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .node {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        .node-title {
+            font-size: 1.4rem;
+            color: #2c6e6d;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #6aab9c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .node-content {
+            line-height: 1.6;
+        }
+        
+        .node-content ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+        
+        .node-content li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .node-content li:before {
+            content: "•";
+            color: #6aab9c;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        .icon {
+            font-size: 1.8rem;
+        }
+        
+        .center-node {
+            background: linear-gradient(135deg, #4a8e8d 0%, #2c6e6d 100%);
+            color: white;
+            width: 350px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .center-node .node-title {
+            color: white;
+            border-bottom: 2px solid #a7c0cd;
+            justify-content: center;
+        }
+        
+        .warning {
+            background-color: #fff4e6;
+            border-left: 4px solid #ffa94d;
+        }
+        
+        .diagnosis {
+            background-color: #e6f7ff;
+            border-left: 4px solid #4dabf7;
+        }
+        
+        .treatment {
+            background-color: #e6f7e6;
+            border-left: 4px solid #40c057;
+        }
+        
+        .symptoms {
+            background-color: #ffe6e6;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .foods {
+            background-color: #f8f0ff;
+            border-left: 4px solid #9c36b5;
+        }
+        
+        .complications {
+            background-color: #fff9db;
+            border-left: 4px solid #fcc419;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-style: italic;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        @media (max-width: 768px) {
+            .mind-map {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .node {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Doença Celíaca</h1>
+        <p class="subtitle">Resumo visual completo em formato de mapa mental</p>
+    </header>
+    
+    <main class="mind-map">
+        <div class="node center-node">
+            <h2 class="node-title"><span class="icon">🧠</span> Doença Celíaca</h2>
+            <div class="node-content">
+                <p>Doença autoimune desencadeada pela ingestão de glúten</p>
+                <p style="font-size: 5rem; margin: 15px 0;">🚫🌾</p>
+            </div>
+        </div>
+        
+        <div class="node">
+            <h2 class="node-title"><span class="icon">ℹ️</span> O que é?</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Doença autoimune crônica</li>
+                    <li>Desencadeada pela ingestão de glúten</li>
+                    <li>Danifica as vilosidades intestinais</li>
+                    <li>Prejudica a absorção de nutrientes</li>
+                    <li>Não é alergia nem intolerância</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node symptoms">
+            <h2 class="node-title"><span class="icon">🤒</span> Sintomas</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Diarreia crônica</li>
+                    <li>Dor abdominal e inchaço</li>
+                    <li>Perda de peso</li>
+                    <li>Fadiga constante</li>
+                    <li>Anemia ferropriva</li>
+                    <li>Dermatite herpetiforme</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node diagnosis">
+            <h2 class="node-title"><span class="icon">🔍</span> Diagnóstico</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Exames sorológicos (anticorpos)</li>
+                    <li>Biópsia intestinal (padrão-ouro)</li>
+                    <li>Teste genético (HLA-DQ2/DQ8)</li>
+                    <li>Não eliminar glúten antes dos exames</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node treatment">
+            <h2 class="node-title"><span class="icon">💊</span> Tratamento</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Dieta sem glúten rigorosa e vitalícia</li>
+                    <li>Acompanhamento nutricional</li>
+                    <li>Suplementação de vitaminas</li>
+                    <li>Exames de acompanhamento regular</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node foods">
+            <h2 class="node-title"><span class="icon">🍎</span> Alimentos</h2>
+            <div class="node-content">
+                <p><strong>Permitidos:</strong></p>
+                <ul>
+                    <li>Frutas, legumes, carnes</li>
+                    <li>Arroz, milho, quinoa</li>
+                    <li>Batata, mandioca</li>
+                </ul>
+                <p><strong>Proibidos:</strong></p>
+                <ul>
+                    <li>Trigo, centeio, cevada</li>
+                    <li>Pães, massas, bolos</li>
+                    <li>Cerveja, alguns medicamentos</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node complications">
+            <h2 class="node-title"><span class="icon">⚠️</span> Complicações</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Desnutrição e deficiências vitamínicas</li>
+                    <li>Osteoporose precoce</li>
+                    <li>Infertilidade e abortos</li>
+                    <li>Doenças neurológicas</li>
+                    <li>Maior risco de linfoma intestinal</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="node warning">
+            <h2 class="node-title"><span class="icon">📌</span> Importante</h2>
+            <div class="node-content">
+                <ul>
+                    <li>Não é uma alergia alimentar</li>
+                    <li>Diferente de sensibilidade ao glúten</li>
+                    <li>Contaminação cruzada é risco</li>
+                    <li>Doença para toda a vida</li>
+                    <li>Necessidade de acompanhamento</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <div class="footer">
+        <p>Informações baseadas em diretrizes médicas atuais - Consulte sempre um profissional de saúde</p>
+    </div>
+</body>
+</html>
